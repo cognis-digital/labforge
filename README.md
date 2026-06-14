@@ -99,6 +99,11 @@ the catalog reflects June-2026 research and is a planning aid, **verify current
 prices before buying**. tok/s figures are order-of-magnitude estimates, not
 benchmarks. Not affiliated with NVIDIA, AMD, Apple, or any vendor named.
 
+## Integrations
+
+Forward `labforge`'s findings to STIX/MISP/Sigma/Splunk/Elastic/Slack/webhooks via
+[`cognis-connect`](https://github.com/cognis-digital/cognis-connect). See **[INTEGRATIONS.md](INTEGRATIONS.md)**.
+
 ## License
 
 Cognis Open Collaboration License (COCL) 1.0 — see [LICENSE](LICENSE).
