@@ -25,3 +25,6 @@ packages = ["labforge"]
 
 [project.optional-dependencies]
 connect = ["cognis-connect @ git+https://github.com/cognis-digital/cognis-connect.git"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
