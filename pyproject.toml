@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "labforge"
+version = "0.1.0"
+description = "Homelab & dev-AI hardware toolkit: catalog, model-fit, compatibility matrix, budget procurement planner, and interop with the Cognis suite + industry tools."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "LicenseRef-COCL-1.0" }
+authors = [{ name = "Cognis Digital" }]
+keywords = ["homelab", "hardware", "local-ai", "llm", "gpu", "procurement",
+            "devops", "edge-ai", "inference", "edgemesh"]
+
+[project.scripts]
+labforge = "labforge.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/cognis-digital/labforge"
+
+[tool.hatch.build.targets.wheel]
+packages = ["labforge"]
