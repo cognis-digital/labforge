@@ -10,6 +10,59 @@
 [![tests](https://img.shields.io/badge/tests-10%20passing-2ea44f.svg)](tests/)
 
 <!-- cognis:layman:start -->
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ labforge-emit --help
+usage: labforge-emit [-h]
+                     --to {stix,taxii,misp,sigma,splunk,elastic,slack,discord,webhook,brief,findings}
+                     [--url URL] [--token TOKEN] [--dry-run]
+                     [input]
+
+forward labforge JSON findings to a platform via cognis-connect
+
+positional arguments:
+  input                 findings JSON file (default: stdin)
+
+options:
+  -h, --help            show this help message and exit
+  --to {stix,taxii,misp,sigma,splunk,elastic,slack,discord,webhook,brief,findings}
+  --url URL
+  --token TOKEN
+  --dry-run
+```
+
+> Blocks above are real `labforge` output — reproduce them from a clone.
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+"findings": [
+    {
+        "id": "1234567890",
+        "title": "Suspicious Network Traffic",
+        "description": "Malicious traffic detected on port 443",
+        "mitre_attack_id": "T1204.001",
+        "created_at": "2023-02-20T14:30:00Z"
+    },
+    {
+        "id": "2345678901",
+        "title": "Unusual File Access",
+        "description": "User accessed a file with suspicious permissions",
+        "mitre_attack_id": "T1056.001",
+        "created_at": "2023-02-20T14:31:00Z"
+    }
+]
+}
+```
+
+<!-- cognis:example:end -->
+
 ## What is this?
 
 Standing up a machine to run modern AI models — or a shared rig for a small dev
